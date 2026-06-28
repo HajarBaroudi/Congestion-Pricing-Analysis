@@ -35,7 +35,7 @@ during_mean = during_vol.mean()
 
 percentage_of_change = ((during_mean - prev_mean) / prev_mean) * 100
 
-print(percentage_of_change)
+print('Overall Vehicle traffic change: ', f"{percentage_of_change:.3f}%")
 
 # t - test
 prev_sd = prev_vol.std(ddof = 0)
@@ -106,7 +106,8 @@ during_offPeak_mean = during_offPeak_vol.mean()
 peak_percentage_of_change = ((during_peak_mean - prev_peak_mean) / prev_peak_mean) * 100
 offPeak_percentage_of_change = ((during_offPeak_mean - prev_offPeak_mean) / prev_offPeak_mean) * 100
 
-print(peak_percentage_of_change, offPeak_percentage_of_change)
+print('Vehicle trafffic change during peak hours: ', f"{peak_percentage_of_change:.3f}%")
+print('Vehicle trafffic change during peak hours: ', f"{offPeak_percentage_of_change:.3f}%")
 
 # 2023 - 2024 MTA ridership
 file_path = '/Users/hajarbaroudi/Downloads/MTA_Subway_Hourly_Ridership__2020-2024_20260622.csv'
@@ -132,7 +133,7 @@ mean_during_ridership = during_ridership.mean()
 
 #change and significance
 ridership_percentage_of_change = ((mean_during_ridership - mean_prev_ridership) / mean_prev_ridership) * 100
-print(ridership_percentage_of_change)
+print('Overall MTA ridership change: ', f"{ridership_percentage_of_change:.3f}%")
 
 prev_ridership_sd = prev_ridership.std(ddof = 0)
 during_ridership_sd = during_ridership.std(ddof = 0)
